@@ -1,0 +1,18 @@
+
+.inner-box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin:1em;
+    padding: 1em;
+    border: 1px;
+    border-color: white;
+    border-radius: 20px;
+    background-color: lightgrey;
+}
+.text{
+    word-wrap: break-word;
+    text-align: justify;
+    width: 800px;
+    color: black;
+}

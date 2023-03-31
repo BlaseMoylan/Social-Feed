@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import CreatePostForms from './Components/CreatePostForms/CreatePostForms';
+import PostList from './Components/PostList/PostList';
 import './App.css';
-
 function App() {
+  const [entries, setEntries] = useState([{name: 'Blase', post: 'This is just the beginning'},{name: 'Blase', post: 'This is just the beginning'}])
+  
+  function newPost(post){
+    let tempPost = [...entries, post];
+    setEntries(tempPost);
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container-fluid layout'>
+      <div className='border-box'>
+        <CreatePostForms newPost={newPost}/>
+      </div>
+      <div className='border-box'>
+        <PostList parentPost={entries}/>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,23 @@
+.inner-box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin:1em;
+    padding: 1em;
+    border: 1px;
+    border-color: white;
+    border-radius: 20px;
+    background-color: lightgrey;
+    width:800px;
+    color: black;
+}
+.form{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size:x-large;
+}
+.input-box{
+    border-radius: 5px;
+    border-color: rgb(184, 184, 184);
+}
