@@ -3,10 +3,10 @@ import CreatePostForms from './Components/CreatePostForms/CreatePostForms';
 import MapList from './Components/PostList/MapPost'
 import './App.css';
 function App() {
-  const [entries, setEntries] = useState([{name: 'Blase', post: 'This is just the beginning'},{name: 'Blase', post: 'This is just the beginning'}])
+  const [entries, setEntries] = useState([])
   
   function newPost(post){
-    let tempPost = [...entries, post];
+    let tempPost = [...entries,post];
     setEntries(tempPost);
   }
   
@@ -19,7 +19,7 @@ function App() {
         <CreatePostForms newPost={newPost}/>
       </div>
       <div className='border-box'>
-        <MapList parentPost={entries}/>
+        <MapList entries={entries}/>
       </div>
     </div>
   );

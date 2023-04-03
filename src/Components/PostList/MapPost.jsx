@@ -1,10 +1,10 @@
 
-import PostList from "./PostList";
+import Post from "./PostList";
 
-const MapList=(props) =>{
+const MapList=({entries}) =>{
     return (
         <div>
-            {props.parentPost.map(entry => <PostList entry={entry} key= {entry.id}/>)}
+            {entries.map((entry, index) => <Post entry={entry} key= {index}/>).reverse()}
         </div>
     )
 }

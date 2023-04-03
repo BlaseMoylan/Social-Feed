@@ -1,3 +1,4 @@
+
 .inner-box{
     display: flex;
     flex-direction: column;
@@ -20,4 +21,19 @@
 .input-box{
     border-radius: 5px;
     border-color: rgb(184, 184, 184);
+    width: 400px;
+}
+.create{
+    border-radius: 20px;
+    font-size: large;
+    
+}
+.create:hover{
+    box-shadow: 0px 5px 5px 0px rgb(75, 75, 75);
+    transform: scale(1.1);
+}
+.create-button{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 70px;
 }

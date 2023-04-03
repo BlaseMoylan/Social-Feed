@@ -26,7 +26,9 @@ const CreatePostForms = (props) => {
                 <label style={{display:'inline-block'}}>Post</label>
                 <input type='string' className="form-control input-box" value={post} onChange={(event) => setPost(event.target.value)} style={{height: '40px'}}/>
             </div>
-            <button type='submit' className="btn btn-primary" >Submit</button>
+            <div className="create-button">
+                <button type='submit' className="btn btn-primary create" >Submit</button>
+            </div>
         </form>
     );
 }
