@@ -1,5 +1,5 @@
 
-import Post from "./PostList";
+import Post from "../PostList";
 
 const MapList=({entries}) =>{
     return (

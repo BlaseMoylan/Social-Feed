@@ -18,11 +18,11 @@
     font-size: large;
 }
 .active{
-    background-color: black;
-    color:white;
+    /* background-color:  rgb(95, 245, 81); */
+    color:rgb(95, 245, 81);
 }
 .inactive{
-    background-color: rgb(184, 184, 184);
+    /* background-color: rgb(184, 184, 184); */
     color:black;
 }
 .likeAndDislike{
@@ -30,10 +30,18 @@
     justify-content: flex-end;
     gap:5px;
 }
-button{
-    border-radius: 20px;
+.nameAndDate{
+    display:flex;
+    align-items: center;
+    word-wrap: break-word;
 }
-button:hover{
-    box-shadow: 0px 5px 5px 0px rgb(75, 75, 75);
-    transform: scale(1.1);
+.nameAndDate p1{
+    display: flex;
+    justify-self: flex-end;
+}
+.nameAndDate p{
+    display: flex;
+    justify-self: flex-start;
+    width: 725px;
+    word-wrap: break-word;
 }

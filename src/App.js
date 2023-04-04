@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CreatePostForms from './Components/CreatePostForms/CreatePostForms';
-import MapList from './Components/PostList/MapPost'
+import MapList from './Components/PostList/MapPost/MapPost'
 import './App.css';
 function App() {
   const [entries, setEntries] = useState([])
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className='container-fluid layout'>
       <div className='nav-row'>
-        <p>Social<small >Feed</small></p>
+        <p><i>Social</i><small ><i>Feed</i></small></p>
       </div>
       <div className='border-box'>
         <CreatePostForms newPost={newPost}/>

@@ -11,6 +11,7 @@
     background-color: lightgrey;
     width:800px;
     color: black;
+    box-shadow: 10px 10px 10px 0px rgb(95, 245, 81);
 }
 .form{
     display: flex;
@@ -26,6 +27,8 @@
 .create{
     border-radius: 20px;
     font-size: large;
+    font-weight:bolder;
+    background-color: rgb(95, 245, 81);
     
 }
 .create:hover{
@@ -36,4 +39,7 @@
     display: flex;
     justify-content: flex-end;
     padding-right: 70px;
+}
+.question{
+    font-family:'Courier New', Courier, monospace;
 }

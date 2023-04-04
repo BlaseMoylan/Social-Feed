@@ -18,6 +18,7 @@ const CreatePostForms = (props) => {
 
     return ( 
         <form onSubmit={handleSubmit} className="inner-box">
+            <div><h1 className="question">What's On Your Mind?</h1></div>
             <div className="form">
                 <label style={{display:'inline-block'}}>Name</label>
                 <input type='string' className="form-control input-box" value={name} onChange={(event) => setName(event.target.value)} style={{height:'20px'}} />
@@ -27,7 +28,7 @@ const CreatePostForms = (props) => {
                 <input type='string' className="form-control input-box" value={post} onChange={(event) => setPost(event.target.value)} style={{height: '40px'}}/>
             </div>
             <div className="create-button">
-                <button type='submit' className="btn btn-primary create" >Submit</button>
+                <button type='submit' className="btn btn-primary create" ><i>Add Post</i></button>
             </div>
         </form>
     );
