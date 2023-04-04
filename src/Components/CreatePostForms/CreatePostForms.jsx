@@ -3,15 +3,19 @@ import { useState } from "react";
 
 import './CreatePostForms.css'
 const CreatePostForms = (props) => {
-
     const [name, setName] = useState("");
     const [post, setPost] = useState("");
+    let today=new Date();
+    let time=today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
 
+    const [date,setCurrentDate] = useState(time);
     function handleSubmit(event){
         event.preventDefault();
+        setCurrentDate(time)
         let newPost={
             name:name,
-            post:post
+            post:post,
+            date:date
         };
         props.newPost(newPost)
     }

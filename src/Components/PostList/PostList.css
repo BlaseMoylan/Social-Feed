@@ -18,11 +18,9 @@
     font-size: large;
 }
 .active{
-    /* background-color:  rgb(95, 245, 81); */
     color:rgb(95, 245, 81);
 }
 .inactive{
-    /* background-color: rgb(184, 184, 184); */
     color:black;
 }
 .likeAndDislike{
