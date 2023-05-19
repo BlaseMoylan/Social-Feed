@@ -22,7 +22,7 @@ pipeline{
         stage('Build Docker Image'){
             steps{
                 
-                sh 'docker build -t blasemoylan/social-feed-react-docker:latest .'
+                sh "docker build -t blasemoylan/social-feed-react-docker:$BUILD_NUMBER ."
         }
         }
         stage('Push Docker Image'){
@@ -33,7 +33,7 @@ pipeline{
                 }
 
                         // Now that we have logged in with the credentials above, we can do authenticated actions like pushing
-                sh "docker push blasemoylan/social-feed-react-docker"
+                sh "docker push blasemoylan/social-feed-react-docker:$BUILD_NUMBER"
                     }
         }
         
