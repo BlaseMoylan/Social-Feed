@@ -13,7 +13,7 @@ function App() {
   return (
     <div className='container-fluid layout'>
       <div className='nav-row'>
-        <p><i>Social</i><small ><i>Feed</i></small></p>
+        <p><i>Socal</i><small ><i>Feed</i></small></p>
       </div>
       <div className='border-box'>
         <CreatePostForms newPost={newPost}/>
