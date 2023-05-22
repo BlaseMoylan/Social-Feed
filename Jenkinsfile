@@ -36,6 +36,21 @@ pipeline{
                 sh "docker push blasemoylan/social-feed-react-docker:$BUILD_NUMBER"
                     }
         }
+        stage('Deploy new image to aws ec2'){
+            steps {
+                sh 'echo "Deploying to EC2 instance..."'
+
+                sshagent(['social-feed-linux-kp-ssh-credentials']){
+                    sh """
+                        SSH_COMMAND="ssh -o StrictHostKeyChecking=no ubuntu@35.160.57.124"
+                        \$SSH_COMMAND "docker stop hosted-react-app && docker rm hosted-react-app"
+                        \$SSH_COMMAND "docker pull blasemoylan/social-feed-react-docker:$BUILD_NUMBER"
+                        \$SSH_COMMAND "docker run -d -p 80:80 --name hosted-react-app blasemoylan/social-feed-react-docker:$BUILD_NUMBER"
+
+                    """
+                }
+            }
+        }
         
     }
 }
